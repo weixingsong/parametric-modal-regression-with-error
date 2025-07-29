@@ -28,20 +28,20 @@ The folder "Simulation Codes" contains two subfolders
      wishreg.xls: The Dietary Data dataset (Excel format).
        
      Analysis Scripts
-        1.Diet.R, 1.Diet.Hatx.R:  Tables 6-8 and figure 7-9.
+        Diet1.R, Diet1.Hatx.R:  Tables 6-8 and figure 7-9.
         
-        1.Diet.test.ks.R & 1.Diet.test.mccl.R:   
+        Diet.test1.ks.R & Diet1.test.mccl.R:   
         Test whether the data follows a Gamma distribution assumption, including the 
-        CvM, KS test from 1.Diet.test.ks.R and the proposed MCCM1 tests in 
-        1.Diet.test.mccl.R.
+        CvM, KS test from Diet1.test.ks.R and the proposed MCCM1 tests in 
+        Diet1.test.mccl.R.
 
-        2.Diet.R, 2.Diet.Hatx.R: Tables 9 and Figure 10
+        Diet2.R, Diet2.Hatx.R: Tables 9 and Figure 10
    
-        2.Diet.test.ks.R & 2.Diet.test.mccl.R:
+        Diet2.test.ks.R & Diet2.test.mccl.R:
         
          Test whether the data follows a Gamma distribution assumption. The 
-         CvM, KS tests are included in 2.Diet.test.ks.R and the proposed MCCM1 test 
-         is included in 2.Diet.test.mccl.R.
+         CvM, KS tests are included in Diet2.test.ks.R and the proposed MCCM1 test 
+         is included in Diet2.test.mccl.R.
 
   -- Folder "AD data": 
 
