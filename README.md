@@ -23,7 +23,6 @@ MASS, pracma, matrixcalc, MultiRNG, gofgamma, dcov, VGAM, latex2exp
 
 ##  Repository Structure
 
-├── ReadME.txt: ReadME file 
 ├── simulation_time.xlsx               # Simulation time recorded for all the simulation studies
 ├── case_study/ 
 │   ├── AD_data/
