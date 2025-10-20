@@ -88,13 +88,6 @@ MASS, pracma, matrixcalc, MultiRNG, gofgamma, dcov, VGAM, latex2exp
         ├── Model_B.3_DC.R             # Model B.3 Distance Correlation
         └── Model_B.3_MCCM2.R          # Model B.3 MCCM2 tests
 
-##  Parameter combinations for simulations:
-
-Sample sizes: n = {100, 200}
-
-Bootstrap replications: B = {100, 200}
-
-Error variances: su2 = {0.25, 1}
 
 ##  Output
 
