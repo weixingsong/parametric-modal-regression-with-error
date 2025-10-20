@@ -1,61 +1,96 @@
-# Parametric-Modal-Regression-with-Error-Contaminated-Covariates
-###  by Yanfei He, Jianhong Shi and Weixing Song  
-  
-This repository contains all the R-codes and data for the simulation studies and real data applicaitons in our manuscript submitted to the Biometrical Journal. 
+Supplementary information / reproducible research files for the manuscript 
+Title: "Parametric Modal Regression with Error Contaminated Covariates"
 
-The folder "Simulation Codes" contains two subfolders
+Authors: Yanfei He, Jianhong Shi, Weixing Song
+Code was written by Yanfei He, Jianhong Shi and Weixing Song
+In case of questions or comments please contact  weixing@ksu.edu.
 
-  -- Folder "Diagnostic 1"
+The code was written/evaluated in R with the following software versions:
+R version 4.4.0
+Processor: Inter(R) Core(TM) i5-8500 CPU @ 3.00GHz 3.00GHZ 
+Computer RAM: 8.00GB
 
-     M1.1: Tables 1–3 and Figures 2–6 in Simulation 1, Section 6.
-     misM2.1: Table 4 in Model 2.1.
-     misM2.2: Table 4 in Model 2.2.
-     misM2.3: Table 4 and 5 in Model 2.3.
+Matrix products: default
 
-  -- Folder "Diagnostics2"
-  
-     B1: Tables B.13–B.15 and Figures B.11–B.15 in Simulation B1 in Appendix B.
-     B2.misM.B.1: Table B.16 in Model B.1.
-     B2.misM.B.2: Table B.16 in Model B.2.
-     B2.misM.B.3: Table B.16 and Table B.17 in Model B.3.
-     B2.misM.B.4: Table B.16 and Table B.18 in Model B.4.
+attached  packages:
+MASS  pracma  matrixcalc  MultiRNG  gofgamma  dcov  VGAM   latex2exp           
 
+This folder contains the following  files that can be used to reproduce all table and figures of the manuscript.
+It contains two subfolders containing the following files:
 
-  -- Folder "Dietary Data"
-  
-     Data File: 
-     
-     wishreg.xls: The Dietary Data dataset (Excel format).
-       
-     Analysis Scripts
-        Diet1.R, Diet1.Hatx.R:  Tables 6-8 and figure 7-9.
+./case_study/:
+This folder contains the following  two files：
+     ./AD data/
+     This subfolder folder contains the following code(.R) and AD data(.xls)
+         estimate.R
+         An R script that contains the code of the analysis reported in the paper (section 6).  One can obtain the result 
+         of Table6-8 and figure 7-9
+
+         test_Cvm_KS.R and test_MCCM1.R
+         One can obtain the pvalue.
+             
+         gammaTest.R and resampling.R
+         Subroutine required by test_Cvm_KS.R.R
+
+         BJadni.xls
+         An XLS sheet containing AD data.
         
-        Diet.test1.ks.R & Diet1.test.mccl.R:   
-        Test whether the data follows a Gamma distribution assumption, including the 
-        CvM, KS test from Diet1.test.ks.R and the proposed MCCM1 tests in 
-        Diet1.test.mccl.R.
 
-        Diet2.R, Diet2.Hatx.R: Tables 9 and Figure 10
+     ./Dietary data/
+     This subfolder folder contains the following code(.R) and Dietary data(.xls)
+         Diet1_estimate.Hatx.R
+         One can obtain the right-panel of Figure 7-9 
+
+         Diet1_estimate.R
+         An R script that contains the code of the analysis reported in the paper (section 6).  One can obtain the result 
+         of Table 6-8 and the left-panel of Figure 7-9.
+
+         Diet1_test_Cvm_KS.R and Diet1_test_MCCM1.R
+          One can obtain the pvalue.
+
+         Diet2_estimate.R
+         One can obtain the result of Table 9 and Figure 10.
+
+         Diet2_test_Cvm_KS.R and Diet2_test_MCCM1.R
+         One can obtain the pvalue.
+             
+         gammaTest.R and resampling.R
+         Subroutine required by Diet2_test_Cvm_KS.R
+
+         wishreg.xls
+         An XLS sheet containing Dietary data.
+    
+    
+./simulation/
+This folder contains the following four files, each corresponding to a different simulation in the manuscript.
+   ./simulation 1/
+    This subfolder folder contains the following code(.R) and a file.
+        Table 1.R
+        All results of Table 1 can be generated using the following parameter combinations: n = {100, 200}, B = {100, 200}, 
+        su2 = {0.25, 1}.  In the code, Btnumsum and NBtnumsum correspond to the proposed method and the Naive method 
+        in the manuscript, respectively.
+
+       Table 2.R,Table 3.R, figure2.dependent.R and figure2.independent.R
+       Running the above will generate the corresponding tables and figures.  In the code, Btnumsum(Sdnumsum),  TBtnumsum(TSdnumsum) 
+       and NBtnumsum(NSdnumsum) correspond to the proposed method(MCCL_1) , MCCL_2 and the Naive method in the manuscript, respectively.
+
    
-        Diet2.test.ks.R & Diet2.test.mccl.R:
-        
-         Test whether the data follows a Gamma distribution assumption. The 
-         CvM, KS tests are included in Diet2.test.ks.R and the proposed MCCM1 test 
-         is included in Diet2.test.mccl.R.
+   ./simulation 2/
+   Running the code in the above file will generate the corresponding tables by varying the value of \beta_4 and the sample size n.
+    
+   ./simulation B1/
+    This subfolder folder contains the following code(.R) and a file. 
+       Table B.13.R
+       All results of Table B.13 can be generated using the following parameter combinations: n = {100, 200}, B = {100, 200}, 
+       su2 = {0.25, 1}.  In the code, Btnumsum and NBtnumsum correspond to the proposed method and the Naive method 
+       in the manuscript, respectively.
 
-  -- Folder "AD data": 
-
-     Data File:
-     
-     BJadni.xls: The Alzheimer’s Disease dataset (Excel format).
-
-     Analysis Scripts
-     
-     AD.estimate.R:  Tables 10–12. 
+      Table B.14.R,Table B.15.R, figure B.11.dependent.R and figure B.11.independent.R
+      Running the above will generate the corresponding tables.
    
-     AD.test.R & AD.test.mccl.R:
-     
-     Test whether the data follows a Gamma distribution assumption. The CvM, KS are 
-     included in AD.test.R and the proposed MCCM1 test is included in AD.test.mccl.R.
-
-
+   ./simulation B2/
+    Running the in the above file will generate the corresponding tables by varying the sample size n.
+    
+      results.R
+      Each folder's result file contains the results generated from within that folder. Specifically, these results correspond to 
+      the tables and figures presented in the manuscript's online supplementary information.
